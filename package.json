@@ -1,8 +1,8 @@
 {
   "name": "nuxt_spa",
   "version": "1.0.0",
-  "description": "My excellent Nuxt.js project",
-  "author": "hirose",
+  "description": "My tremendous Nuxt.js project",
+  "author": "hiro",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "nuxt": "^2.0.0",
-    "nuxt-property-decorator": "^2.5.0"
+    "vue-property-decorator": "^8.3.0"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.3.10"

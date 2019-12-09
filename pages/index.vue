@@ -1,16 +1,47 @@
 <template>
   <div class="container">
-
+    <div>
+      <h1 class="title">
+        nuxt_spa
+      </h1>
+      <h2 class="subtitle">
+        My tremendous Nuxt.js project
+      </h2>
+      <Form />
+      <div class="links">
+        <a
+          href="https://nuxtjs.org/"
+          target="_blank"
+          class="button--green"
+        >
+          Documentation
+        </a>
+        <a
+          href="https://github.com/nuxt/nuxt.js"
+          target="_blank"
+          class="button--grey"
+        >
+          GitHub
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'nuxt-property-decorator';
+import { Vue, Component } from 'vue-property-decorator';
+import Form from '@/components/Form.vue';
 
+@Component({
+  components: {
+    Form,
+  },
+})
 export default class index extends Vue {
   
 }
 </script>
+
 <style>
 .container {
   margin: 0 auto;

@@ -1,6 +1,6 @@
 # nuxt_spa
 
-> My excellent Nuxt.js project
+> My tremendous Nuxt.js project
 
 ## Build Setup
 
