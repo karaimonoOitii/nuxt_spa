@@ -1,8 +1,8 @@
 <template>
-    <dev>
+    <div>
         <input type="text" v-model="user.userId" placeholder="USER ID"><br />
         <input type="password" v-model="user.passWord" placeholder="PASSWORD">
-    </dev>
+    </div>
 </template>
 
 <script lang="ts">

@@ -32,8 +32,5 @@ import Form from '@/components/Form.vue';
   },
 })
 export default class index extends Vue {
-  $refs!: {
-    form: Form,
-  }
 }
 </script>
