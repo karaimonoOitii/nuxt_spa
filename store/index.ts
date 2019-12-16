@@ -1,16 +1,5 @@
-import Vuex from "vuex";
-import mutations from "./mutations";
-import actions from "./actions";
-
-const store = () => {
-  return new Vuex.Store({
-    state: {
-      // ユーザーのログイン状況フラグ
-      authUser: null
-    },
-      mutations,
-      actions
-    })
-};
-
-export default store;
+import { Store } from 'vuex';
+import { initialiseStores } from '@/utils/store-accessor';
+const initializer = (store: Store<any>) => initialiseStores(store);
+export const plugins = [initializer];
+export * from '@/utils/store-accessor';

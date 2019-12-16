@@ -9,7 +9,7 @@
         <a
           target="_blank"
           class="button--green"
-          @click="createAccount()"
+          @click="createAccountBtn()"
         >
           アカウント作成
         </a>
@@ -25,6 +25,7 @@
 <script lang="ts">
 // module
 import { Vue, Component } from 'vue-property-decorator';
+import { userModuleStore } from '@/store';
 // interface
 import { userInfo } from '@/interface/userInfo';
 // Component
@@ -36,16 +37,22 @@ import Form from '@/components/Form.vue';
     },
 })
 export default class index extends Vue {
-  $refs!: {
-    form: Form,
-  }
+    $refs!: {
+        form: Form,
+    }
   
-  private async createAccount() {
-      try {
-          await this.$store.dispatch('createAccount', this.$refs.form.user);
-      } catch(err) {
-          console.log(err);
-      }
-  }
+    private async createAccountBtn() {
+        try {
+            const result = await userModuleStore.createAccount(this.$refs.form.user);
+            // null check
+            if(!result) {
+                this.$router.push('/helloWorld');
+            } else {
+                // error handling
+            }      
+        } catch(err) {
+            console.log(err);
+        }
+    }
 }
 </script>

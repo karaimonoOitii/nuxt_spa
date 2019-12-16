@@ -50,5 +50,8 @@ export default {
     */
     extend (config, ctx) {
     }
-  }
+  },
+  transpileDependencies: [
+    'vuex-module-decorators',
+  ]
 }
